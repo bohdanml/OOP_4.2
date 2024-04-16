@@ -1,6 +1,9 @@
+
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "..//OOP_4.2/progression.cpp"
+#include "../OOP_4.2/ArithmeticProgression.cpp"
+#include "../OOP_4.2/GeometricProgression.cpp"
+#include "../OOP_4.2/progression.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -12,9 +15,14 @@ namespace UnitTest1
 
         TEST_METHOD(TestArithmeticProgression)
         {
-            ArithmeticProgression arith_prog(2, 6);
-            Assert::AreEqual(arith_prog.element_progression(0), 2.0);
-            Assert::AreEqual(arith_prog.element_progression(1), 8.0);
+            ArithmeticProgression ap(4, 6);
+            Assert::AreEqual(10.0, ap.element_progression(1));
+            Assert::AreEqual(16.0, ap.element_progression(2));
+            Assert::AreEqual(22.0, ap.element_progression(3));
+            Assert::AreEqual(28.0, ap.element_progression(4));
+            Assert::AreEqual(34.0, ap.element_progression(5));
         }
+
+ 
     };
 }

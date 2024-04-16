@@ -127,11 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArithmeticProgression.h" />
+    <ClInclude Include="GeometricProgression.h" />
     <ClInclude Include="progression.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArithmeticProgression.cpp" />
+    <ClCompile Include="GeometricProgression.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="progression.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
