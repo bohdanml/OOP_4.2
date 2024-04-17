@@ -1,5 +1,5 @@
 #include "ArithmeticProgression.h"
-#include <cmath>
+#include <typeinfo> 
 
 ArithmeticProgression::ArithmeticProgression(double a0, double d) : first_term(a0), common_difference(d) {}
 
@@ -8,5 +8,5 @@ double ArithmeticProgression::element_progression(int n) {
 }
 
 std::string ArithmeticProgression::type() const {
-    return "Arithmetic";
+    return typeid(*this).name();
 }

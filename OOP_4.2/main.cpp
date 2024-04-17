@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <typeinfo> 
 #include "ArithmeticProgression.h"
 #include "GeometricProgression.h"
 
@@ -10,6 +11,8 @@ int main() {
 
     for (int i = 0; i < 2; ++i) {
         std::cout << "Progression type: " << progressions[i]->type() << std::endl;
+        std::cout << "Real type of object " << i + 1 << ": " << typeid(*progressions[i]).name() << std::endl;
+
         for (int j = 0; j < 5; ++j) {
             std::cout << "Element " << j << ": " << progressions[i]->element_progression(j) << std::endl;
         }
